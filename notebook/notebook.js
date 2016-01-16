@@ -7,15 +7,13 @@ var loadBook = function(book){
 		gradients:true,
 		autoCenter:true
 	});
+
 	$(bookid + "-viewport").hide();
-	$(bookid + "-hide").hide();
-	console.log(book + "hidden");
 
 	$(bookid + "-show").on("click", function(){
 		
-		$(bookid + "-show").hide();
-		$(bookid + "-hide").show();
 		$(bookid + "-viewport").show(300);
+		$("body").css({"overflow":"hidden"});
 		
 		$(document).on("keydown",function(e){
 			switch(e.which){
@@ -27,6 +25,12 @@ var loadBook = function(book){
 					$(bookid).turn("next");
 					console.log("right key pressed");
 					break;
+				case 27:
+					$(bookid + "-viewport").hide(300);
+					$(document).off("keydown",function(e){ });
+					$(document).unbind("keydown");
+					$("body").css({"overflow": "auto"});
+					break;
 
 			}
 			e.preventDefault();
@@ -35,10 +39,8 @@ var loadBook = function(book){
 
 	$(bookid + "-hide").on("click", function(){
 
-		$(bookid + "-hide").hide();
-		$(bookid + "-show").show();
 		$(bookid + "-viewport").hide(300);
-
+		$("body").css({"overflow": "auto"});
 		$(document).off("keydown",function(e){ });
 		$(document).unbind("keydown");
 	});

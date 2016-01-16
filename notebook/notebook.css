@@ -1,13 +1,33 @@
 body{
 	margin:0;
 	padding:0;
+	background:#fcc;
+	color:#fff;
+	font-family:sans-serif;
+	overflow:hidden;
 }
 .book-viewport{
-	position absolute;
+	position: absolute;
+	top:0;
 	width:100%;
+	height:100%;
 	overflow:hidden;
 	padding-top:20px;
 	padding-bottom:20px;
+	background: rgba(255,255,255,0.8);
+	color:#000;
+	font-size:15px;
+}
+.instructions{
+	font-size:13px;
+	text-align:center;
+	padding:10px;
+
+}
+.book-hide{
+	position:absolute;
+	top:10px;
+	right:10px;
 }
 .container{
 	width:922px;
