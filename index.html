@@ -4,20 +4,21 @@
 		<meta charset="utf-8" />
 		<title>Synergy</title>
 		<link  href="http://fonts.googleapis.com/css?family=Reenie+Beanie:regular" rel="stylesheet" type="text/css"> 
-		<link  href="css/stickynotes.css" rel="stylesheet" type="text/css">
-		<link  href="css/style.css" rel="stylesheet" type="text/css">
+		<link  href="css/stickynotes.css" rel="stylesheet" type="text/css" />
+		<link  href="css/style.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" href="css/notebook.css" type="text/css" />
 	</head>
 	<body>
 
 		<ul id="stickynotes">
 			<li>
 				<a href="#">
-					<p>Text Content #1</p>
+					<p id="book1-show">Text Content #1</p>
 				</a>
 			</li>
 			<li>
 				<a href="#">
-					<p>Text Content #2</p>
+					<p id="book2-show">Text Content #2</p>
 				</a>
 			</li>
 			<li>
@@ -30,7 +31,7 @@
 					<p>Text Content #4</p>
 				</a>
 			</li>
-		<img class ="logo" src="images/logo.png" alt="synergy2016" />
+			<img class ="logo" src="images/logo.png" alt="synergy2016" />
 			<li>
 				<a href="#">
 					<p>Text Content #5</p>
@@ -52,6 +53,40 @@
 				</a>
 			</li>
 		</ul>
+		<div id="book1-viewport" class="book-viewport">
+			<div class="instructions" > Use mouse on page corner or arrow keys to turn pages. Esc to close.</div>
+			<span id="book1-hide" class="book-hide">Close &#10008;</span> 
+			<div class="container"> 
+				<div id="book1" class="flipbook">
+					<div><p>Page 1 </p> </div>
+					<div><p>Page 2 </p> </div>
+					<div><p>Page 3 </p> </div>
+					<div><p>Page 4 </p> </div>
+					<div><p>Page 5 </p> </div>
+					<div><p>Page 6 </p> </div>
+					<div><p>Page 7 </p> </div>
+					<div><p>Page 8 </p> </div>
+				</div>
+			</div>
+		</div>
+		<div id="book2-viewport" class="book-viewport">
+			<div class="instructions" > Use mouse on page corner or arrow keys to turn pages. Esc to close.</div>
+			<span id="book2-hide" class="book-hide" >Close &#10008;</span> 
+			<div class="container"> 
+				<div id="book2" class="flipbook">
+					<div><p>book 2 Page 1 </p> </div>
+					<div><p>book 2 Page 2 </p> </div>
+					<div><p>book 2 Page 3 </p> </div>
+					<div><p>book 2 Page 4 </p> </div>
+					<div><p>book 2 Page 5 </p> </div>
+					<div><p>book 2 Page 6 </p> </div>
+					<div><p>book 2 Page 7 </p> </div>
+					<div><p>book 2 Page 8 </p> </div>
+				</div>
+			</div>
+		</div>
+
+
 		<footer> (c) 2016 MEA
 		</footer>
 
@@ -59,4 +94,8 @@
 	<script src="js/extras/jquery.min.1.7.js"></script>
 	<script src="js/stickynotes.js"></script>
 	<script src="js/script.js"></script>
+	<script type="text/javascript" src="js/lib/turn.min.js"></script>
+	<script type="text/javascript" src="js/notebook.js"></script>
+
+
 </html>
