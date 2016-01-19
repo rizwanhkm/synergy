@@ -10,7 +10,7 @@ body{
 	overflow:hidden;
 	padding-top:20px;
 	padding-bottom:20px;
-	background: rgba(255,255,255,0.8);
+	background: rgba(200,220,200,0.9);
 	color:#000;
 	font-size:15px;
 	z-index:1000;
@@ -34,13 +34,14 @@ body{
 
 .flipbook .shadow{
 	box-shadow:	0 4px 10px #666;
-	font-family:"Reenie Beanie",arial,sans-serif;
 }
 .page{
 	box-shadow: 0 0 20px rgba(0,0,0,0.2);
 }
 .page p {
 	margin:30px;
+	font-family:"Reenie Beanie",arial,sans-serif;
+	font-size:25px;
 }
 .flipbook .even{
 	background:-webkit-gradient(linear, left top, right top, color-stop(0.95, #fff), color-stop(1, #dadada));
